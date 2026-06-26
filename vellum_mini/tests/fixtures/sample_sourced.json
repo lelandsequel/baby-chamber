@@ -1,0 +1,17 @@
+{
+  "record_id": "rec_001",
+  "values": [
+    {
+      "name": "alpha",
+      "value": 42,
+      "source": "synthetic_lab_a",
+      "sha": "73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049"
+    },
+    {
+      "name": "beta",
+      "value": "widget",
+      "source": "synthetic_lab_b",
+      "sha": "2c7c7f2b113383b077ac1fbced2eb5e99ae26a0d2a81523d228f88a0bc24f21e"
+    }
+  ]
+}

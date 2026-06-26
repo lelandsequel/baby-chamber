@@ -1,0 +1,22 @@
+{
+  "chain_id": "c1",
+  "entries": [
+    {
+      "index": 0,
+      "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "payload": {
+        "evt": "start"
+      },
+      "entry_hash": "bc22c53f6f455c79fbcbcf28fef787c1268a141e1d2ee70d60f4b2778b07000d"
+    },
+    {
+      "index": 1,
+      "prev_hash": "bc22c53f6f455c79fbcbcf28fef787c1268a141e1d2ee70d60f4b2778b07000d",
+      "payload": {
+        "evt": "tick",
+        "n": 1
+      },
+      "entry_hash": "a925f658b2fb20ed36609b6e2e38932b41452479cd10c2e7630237ed5f1b0c70"
+    }
+  ]
+}

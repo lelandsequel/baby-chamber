@@ -1,0 +1,19 @@
+{
+  "baseline": {
+    "bedrock_id": "bed_001",
+    "signer_id": "synthetic_signer",
+    "vector": {
+      "alpha": 1.0,
+      "beta": 2.0
+    },
+    "bedrock_hash": "760cf6bb385c5746fea7da7c5c81addca83917a62cfe46c5a38f29fe5d637f30",
+    "signature": "db38bd54ed2ffabb75b17b3c8ed4e105d1aadf342f5d225a1f63ced681d84bf0"
+  },
+  "sample": {
+    "vector": {
+      "alpha": 1.1,
+      "beta": 2.0
+    }
+  },
+  "threshold": 0.5
+}

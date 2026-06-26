@@ -1,0 +1,1 @@
+{"file_id":"f2","source":"try:\n    x=1\nexcept:\n    pass\nprint(x)\n"}

@@ -1,0 +1,37 @@
+{
+  "close_id": "close_003",
+  "required_stages": [
+    "vellum",
+    "aurora",
+    "luna"
+  ],
+  "upstream_receipts": {
+    "vellum": {
+      "stage": "vellum",
+      "record_id": "rec_close_001",
+      "final_outcome": "ENVELOPE_EMIT",
+      "verdict": "RELEASED",
+      "refusal_reason": null,
+      "envelope_count": 2,
+      "deterministic_receipt_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    "aurora": {
+      "stage": "aurora",
+      "record_id": "rec_close_001",
+      "final_outcome": "RELEASE",
+      "verdict": "RELEASED",
+      "refusal_reason": null,
+      "pass_count": 2,
+      "deterministic_receipt_hash": "855d013284925d07f938131932521c6a970123b60270c87324d622118196fab9"
+    },
+    "luna": {
+      "stage": "luna",
+      "record_id": "rec_close_001",
+      "final_outcome": "WITNESSED",
+      "verdict": "RELEASED",
+      "refusal_reason": null,
+      "entry_index": 0,
+      "deterministic_receipt_hash": "3691e32ce0fea3b83a671d8c622f54c47bd973f93342e2af2645f75780bb90aa"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "run_id": "run_001",
+  "produce": {
+    "values": [
+      {
+        "name": "alpha",
+        "value": 42,
+        "source": "synthetic_cosmic_a",
+        "sha": "73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049"
+      },
+      {
+        "name": "beta",
+        "value": "spine_ok",
+        "source": "synthetic_cosmic_b",
+        "sha": "0f3f010f45c58ab67d20ae6802eb2ab303d9d2e0e419a27ec692df84e3e5f6af"
+      }
+    ]
+  },
+  "checks": [
+    {"name": "provenance_present", "passed": true},
+    {"name": "schema_valid", "passed": true}
+  ],
+  "witness": {"chain_id": "chain_run_001", "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000", "entry_index": 0}
+}

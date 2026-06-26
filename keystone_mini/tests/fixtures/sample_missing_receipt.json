@@ -1,0 +1,28 @@
+{
+  "close_id": "close_002",
+  "required_stages": [
+    "vellum",
+    "aurora",
+    "luna"
+  ],
+  "upstream_receipts": {
+    "vellum": {
+      "stage": "vellum",
+      "record_id": "rec_close_001",
+      "final_outcome": "ENVELOPE_EMIT",
+      "verdict": "RELEASED",
+      "refusal_reason": null,
+      "envelope_count": 2,
+      "deterministic_receipt_hash": "0462f79b9622bb1f2d9c442e4b95e817bbb266f23e49b7a133d26e142439a6af"
+    },
+    "aurora": {
+      "stage": "aurora",
+      "record_id": "rec_close_001",
+      "final_outcome": "RELEASE",
+      "verdict": "RELEASED",
+      "refusal_reason": null,
+      "pass_count": 2,
+      "deterministic_receipt_hash": "855d013284925d07f938131932521c6a970123b60270c87324d622118196fab9"
+    }
+  }
+}

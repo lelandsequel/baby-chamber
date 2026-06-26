@@ -1,0 +1,7 @@
+{
+  "candidate_id": "cand_001",
+  "checks": [
+    {"name": "schema_valid", "passed": true},
+    {"name": "provenance_present", "passed": true}
+  ]
+}

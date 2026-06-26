@@ -1,0 +1,1 @@
+{"deal_id":"d2","inputs":{"fcf_year1":{"value":100,"source":"syn_model"},"discount_rate":{"value":0.10,"source":"syn_wacc"}}}

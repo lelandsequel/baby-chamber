@@ -1,0 +1,18 @@
+{
+  "run_id": "run_002",
+  "produce": {
+    "values": [
+      {
+        "name": "alpha",
+        "value": 42,
+        "source": "synthetic_cosmic_a",
+        "sha": "73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049"
+      }
+    ]
+  },
+  "checks": [
+    {"name": "schema_valid", "passed": true},
+    {"name": "provenance_present", "passed": false, "detail": "missing source on field gamma"}
+  ],
+  "witness": {"chain_id": "chain_run_002", "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000", "entry_index": 0}
+}
