@@ -9,12 +9,15 @@ safe for open source (MIT) and Chasify (zero proprietary entanglement).
 
 ## Reference template
 
-[`strata_mini`](https://github.com/lelandsequel/strata-mini) is the shape every baby mirrors.
+`strata_mini` (BabySTRATA) is the shape every baby mirrors. Originally public at
+[`github.com/lelandsequel/strata-mini`](https://github.com/lelandsequel/strata-mini);
+now lives in this monorepo.
 
 ## Babies
 
 | Package | Role | Status |
 |---------|------|--------|
+| `strata_mini` | Deterministic semantic decision layer (template) | built |
 | `vellum_mini` | Provenance envelope — no value without `{value, source, sha}` | built |
 | `aurora_mini` | Verdict gate — `RELEASE` / `REFUSE` with reasons | built |
 | `luna_mini` | Append-only hash-chain witness | built |
@@ -28,7 +31,7 @@ safe for open source (MIT) and Chasify (zero proprietary entanglement).
 | `keystone_mini` | Upstream receipt integrity lock | built |
 | `mirrorverse_mini` | — | **pending Captain** |
 
-`strata_mini` lives separately as the original template. `mirrorverse_mini` is not built until Captain confirms its one-liner.
+`mirrorverse_mini` is not built until Captain confirms its one-liner.
 
 ## Contract (every baby)
 

@@ -1,0 +1,5 @@
+# The strata_mini package itself needs NOTHING beyond the Python stdlib.
+# These are only for the optional REST server (app.py) and the test runner.
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pytest>=7.4

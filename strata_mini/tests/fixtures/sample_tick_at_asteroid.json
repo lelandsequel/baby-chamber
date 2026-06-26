@@ -1,0 +1,21 @@
+{
+  "tick": 3,
+  "ship": {
+    "id": "ship_1",
+    "position": { "x": 5, "y": 5 },
+    "energy": 90,
+    "max_energy": 100,
+    "cargo": { "nutrinium": 10, "capacity": 50 },
+    "destroyed": false,
+    "recharging": false,
+    "health": 100
+  },
+  "visible": {
+    "asteroids": [
+      { "id": "ast_1", "position": { "x": 5, "y": 5 }, "nutrinium": 40, "density": 1.2 }
+    ],
+    "trading_posts": [],
+    "ships": [],
+    "wreckage": []
+  }
+}

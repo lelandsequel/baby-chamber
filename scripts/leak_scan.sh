@@ -18,7 +18,7 @@ PATTERNS=(
 )
 
 FOUND=0
-for pkg in vellum_mini aurora_mini luna_mini gavel_mini cipher_mini vantage_mini cadmus_mini bifrost_mini cosmic_mini constellation_mini keystone_mini; do
+for pkg in strata_mini vellum_mini aurora_mini luna_mini gavel_mini cipher_mini vantage_mini cadmus_mini bifrost_mini cosmic_mini constellation_mini keystone_mini; do
   while IFS= read -r -d '' f; do
     for pat in "${PATTERNS[@]}"; do
       if grep -qiE "$pat" "$f" 2>/dev/null; then

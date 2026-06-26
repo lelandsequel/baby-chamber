@@ -5,6 +5,7 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 PKGS=(
+  strata_mini
   vellum_mini
   aurora_mini
   luna_mini
@@ -32,6 +33,7 @@ import importlib, json, pathlib, sys
 
 ROOT = pathlib.Path(".")
 cases = {
+    "strata_mini": ("strata_mini.bot", "choose_action", "sample_tick_at_asteroid.json"),
     "vellum_mini": ("vellum_mini.bot", "envelope", "sample_sourced.json"),
     "aurora_mini": ("aurora_mini.bot", "verdict", "sample_all_pass.json"),
     "luna_mini": ("luna_mini.bot", "witness", "sample_intact.json"),
@@ -63,6 +65,7 @@ import importlib, json, pathlib, sys
 
 ROOT = pathlib.Path(".")
 refusals = {
+    "strata_mini": None,
     "vellum_mini": ("vellum_mini.bot", "envelope", "sample_unsourced.json"),
     "aurora_mini": ("aurora_mini.bot", "verdict", "sample_with_failure.json"),
     "luna_mini": ("luna_mini.bot", "witness", "sample_broken.json"),
@@ -74,13 +77,27 @@ refusals = {
     "constellation_mini": ("constellation_mini.bot", "measure", "sample_exceeds_threshold.json"),
     "keystone_mini": ("keystone_mini.bot", "close", "sample_missing_receipt.json"),
 }
-for pkg, (mod, fn, fixture) in refusals.items():
+for pkg, case in refusals.items():
     sys.path.insert(0, str(ROOT / pkg))
+    if case is None:
+        if pkg == "strata_mini":
+            from strata_mini.canonical import canonicalize
+            from strata_mini.facts import derive_facts
+            from strata_mini.gate import REFUSED, gate
+            from strata_mini.policy import ActionDecision
+            raw = json.loads((ROOT / pkg / "tests/fixtures/sample_tick_empty.json").read_text())
+            st = canonicalize(raw)
+            fin = gate(ActionDecision("MINE", {}, "forced bad", "MINE_LOCAL"), st, derive_facts(st))
+            assert fin.verdict == REFUSED
+            print("REFUSAL OK      strata_mini")
+        sys.path.pop(0)
+        continue
+    mod, fn, fixture = case
     pipe = importlib.import_module(mod)
-    gate = importlib.import_module(mod.replace(".bot", ".gate"))
+    gate_mod = importlib.import_module(mod.replace(".bot", ".gate"))
     raw = json.loads((ROOT / pkg / "tests/fixtures" / fixture).read_text())
     out = getattr(pipe, fn)(raw)
-    assert out["verdict"] == gate.REFUSED, (pkg, out)
+    assert out["verdict"] == gate_mod.REFUSED, (pkg, out)
     print(f"REFUSAL OK      {pkg}")
     sys.path.pop(0)
 
