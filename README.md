@@ -5,7 +5,7 @@ deterministic, dependency-light packages. Each demonstrates the chamber methodol
 (**deterministic · receipted · refuse-or-verify**) in one domain.
 
 **This is not production chamber software.** These are clean-room teaching artifacts
-safe for open source (MIT) and Chasify (zero proprietary entanglement).
+safe for open source (Apache-2.0) and Chasify (zero proprietary entanglement).
 
 ## Reference template
 
